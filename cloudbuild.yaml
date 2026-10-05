@@ -1,6 +1,5 @@
-# CI/CD: gatilho do Cloud Build apontando para esta pasta
-# (Build config: gcp-decision-intelligence/cloudbuild.yaml,
-#  diretório: gcp-decision-intelligence).
+# CI/CD: gatilho do Cloud Build ligado a este repositório
+# (Build config: cloudbuild.yaml, na raiz).
 # A service account do Cloud Build precisa de roles/run.admin e
 # roles/iam.serviceAccountUser na SA do Cloud Run.
 substitutions:

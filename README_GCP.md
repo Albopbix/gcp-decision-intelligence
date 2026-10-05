@@ -50,7 +50,8 @@ e `DATABASE_URL=postgresql://app_user:SENHA@127.0.0.1:5432/business_ai` (veja `.
 Pré-requisitos: `gcloud` autenticado, projeto com faturamento ativo.
 
 ```bash
-cd gcp-decision-intelligence
+git clone https://github.com/Albopbix/gcp-decision-intelligence-.git
+cd gcp-decision-intelligence-
 gcloud config set project SEU_PROJETO
 export REGION=southamerica-east1          # opcional (padrão: São Paulo)
 
@@ -64,8 +65,7 @@ por variáveis de ambiente — veja `deploy/config.sh`.
 ### CI/CD com Cloud Build
 
 Crie um gatilho no Cloud Build ligado a este repositório com
-*Build config* = `gcp-decision-intelligence/cloudbuild.yaml` e diretório
-`gcp-decision-intelligence`. Dê à service account do Cloud Build os papéis
+*Build config* = `cloudbuild.yaml` (na raiz). Dê à service account do Cloud Build os papéis
 `roles/run.admin` e `roles/iam.serviceAccountUser` sobre `decision-intel-run`.
 
 ## Copiloto com Gemini (Vertex AI)
